@@ -30,7 +30,7 @@ use Cwd;
 
 # Usage subroutine
 sub usage {
-    print STDERR "$0 <target_directory> <number_of_files> <size_of_files>\n\n";
+    print STDERR "$0 <target_directory> <number_of_files> <files_per_directory> <size_of_files>\n\n";
     print STDERR "Where:\n";
     print STDERR "target_directory: The directory to create the subdirectories full of files.\n";
     print STDERR "number_of_files:  The total number of files you wish to create.\n";
