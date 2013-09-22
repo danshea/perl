@@ -17,7 +17,7 @@ use Cwd;
 #      target_directory:    The directory to create the subdirectories full of
 #                           files.   
 #      number_of_files:     The total number of files you wish to create.
-#      files_per_directory: The max number of files in each directory.\n"
+#      files_per_directory: The max number of files in each directory.
 #      size_of_files:       The size that each file should be, in 1kB blocks.
 #
 # Example:
