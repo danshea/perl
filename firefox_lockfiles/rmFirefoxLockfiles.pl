@@ -79,7 +79,7 @@ sub findLockfiles{
     my $lockfiledir = File::Spec->catdir(($home, '.mozilla', 'firefox'));
     my $defaultdir = qx/ls -ld $lockfiledir\/*.default | $awk_exec '{print \$8}'/;
     chomp($defaultdir);
-    $lockfiledir = File::Spec->catdir(($lockfiledir, $defaultdir));
+    $lockfiledir = $defaultdir;
     my $lockfile = File::Spec->catfile(($lockfiledir),'lock');
     my $parentlockfile = File::Spec->catfile(($lockfiledir),'.parentlock');
     return(($lockfile, $parentlockfile));
@@ -106,13 +106,9 @@ say "Using username: $whoami";
 say "Using \$HOME: $home";
 my @pids = findFirefoxen();
 say "Killing @pids";
-=cut
-killFirefoxen();
-=cut
+killFirefoxen(@pids);
 my @lockfiles = findLockfiles();
 say "Removing @lockfiles";
-=cut
-removeLockfiles();
-=cut
+removeLockfiles(@lockfiles);
 say "Lock files have been removed, please try to re-start firefox.";
 exit(0);
