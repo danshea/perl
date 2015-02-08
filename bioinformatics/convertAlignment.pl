@@ -172,4 +172,4 @@ Default is no linker but a useful linker could be NNNNNNNNNN
 -r remove uninformative sites (Ns, gaps, and non-variable sites)
 -h this helpful menu
 ";
-
+}
